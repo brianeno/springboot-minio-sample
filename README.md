@@ -1,0 +1,1 @@
+# Spring boot/minio demo project for file upload

@@ -1,0 +1,23 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+  datasource: # should match docker-compose.yml
+    url: jdbc:postgresql://localhost:5433/uploaddb
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: POSTGRESQL
+
+upload:
+    default-chunk-size: 3145728 #value in bytes
+
+minio: # should match docker-compose.yml
+  url: http://localhost:9000
+  username: admin
+  password: AdminPW!
+  put-object-part-size: 5242880
